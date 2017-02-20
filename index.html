@@ -41,11 +41,12 @@
 			font-variant: normal;
 			font-weight: 500;
 			line-height: 16px;
+			text-align: right;
 			}
 		#headlineTable {color: white;}
-		#leftRow {background-color: mediumblue; height: 33%;}
+		#leftRow {background-color: #0D377D; height: 33%;}
 		#middleRow {background-color: black; height: 34%;}
-		#rightRow {background-color: crimson; height: 33%;}
+		#rightRow {background-color: #CD2323; height: 33%;}
 		#middleHeadline {font-weight: bold;}
 		#leftHeadline {text-align: left;}
 		#rightHeadline {text-align: left;}
@@ -54,10 +55,10 @@
 <body>
 	<table id="headlineTable">
 		<tr id="leftRow">
-			<th class="sourceColumn"><h1 id="leftSource"></h1><p id="leftDate"></p></th>
+			<th class="sourceColumn"><h1 id="leftSource"></h1></th>
 			<th class="slashColumn"><img src="slash.png" alt="/"></th>
-			<th class="contentColumn"><div id="leftHeadline"></div></th>
-			<th class="linkColumn"><a id="leftLink" href="#"><img src="button.png" alt="Read Article" style="width:auto; height:50%;"></a></th>
+			<th class="contentColumn"><div id="leftHeadline"></div><p id="leftDate"></p></th>
+			<th class="linkColumn"><a id="leftLink" href="#" target="_blank"><img src="button.png" alt="Read Article" style="width:auto; height:50%;"></a></th>
 		</tr>
 		<tr id="middleRow">
 			<!-- <th><h1 id="topic"></h1></th> -->
@@ -65,10 +66,10 @@
 			<th><a id="headlineButton" onclick="newHeadline()" href="javascript:void(0);"><img src="refresh.png" alt="Next Headline" style="width:auto; height:50%;"></a></th>
 		</tr>
 		<tr id="rightRow">
-			<th><h1 id="rightSource"></h1><p id="rightDate"></p></th>
+			<th><h1 id="rightSource"></h1></th>
 			<th><img src="slash.png" alt="/"></th>
-			<th><div id="rightHeadline"></div></th>
-			<th><a id="rightLink" href="#"><img src="button.png" alt="Read Article" style="width:auto; height:50%;"></a></th>
+			<th><div id="rightHeadline"></div><p id="rightDate"></p></th>
+			<th><a id="rightLink" href="#" target="_blank"><img src="button.png" alt="Read Article" style="width:auto; height:50%;"></a></th>
 		</tr>
 	</table> 	
 	<script type="text/javascript" src="headlines.json"></script>
