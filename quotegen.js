@@ -22,7 +22,7 @@ function newHeadline() {
 	document.getElementById('rightSource').innerHTML = headlines[headlineNumber]["right_source"];
 	document.getElementById('rightDate').innerHTML = headlines[headlineNumber]["right_date"];
 	
-	document.getElementById('topic').innerHTML = headlines[headlineNumber]["topic"];
+	/*document.getElementById('topic').innerHTML = headlines[headlineNumber]["topic"]; */
 	document.getElementById('middleHeadline').innerHTML = headlines[headlineNumber]["middle_headline"];
 	}
 	
