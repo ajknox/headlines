@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Read Between The Headlines</title>
+	<style>
+		* {box-sizing: border-box;}
+		table {
+			border-collapse: collapse; 
+			height:100%; 
+			width:100%; 
+			position: absolute; top: 0; bottom: 0; left: 0; right: 0; 
+			border:0px solid;
+			vertical-align: middle;
+			text-align: middle;
+			}
+		.zeroColumn {width:200px;}
+		.twoColumn {width:200px;}
+		a {color: white;}
+		#headlineTable {color: white;}
+		#leftRow {background-color: blue; height: 33%}
+		#middleRow {background-color: black; height: 34%}
+		#rightRow {background-color: red; height: 33%}
+	</style>
+</head>
+<body>
+	<table id="headlineTable">
+		<tr id="leftRow">
+			<th class="zeroColumn"><h1 id="leftSource"></h1><div id="leftDate"></div></th>
+			<th><div id="leftHeadline"></div></th>
+			<th class="twoColumn"><a id="leftLink" href="#">Read Article</a></th>
+		</tr>
+		<tr id="middleRow">
+			<th><h1 id="topic"></h1></th>
+			<th><div id="middleHeadline"></div></th>
+			<th><a id="headlineButton" onclick="newHeadline()" href="javascript:void(0);"><img src="refresh_white.png" alt="Next Headline" style="width:auto; height:25%;"></a></th>
+		</tr>
+		<tr id="rightRow">
+			<th><h1 id="rightSource"></h1><div id="rightDate"></div></th>
+			<th><div id="rightHeadline"></div></th>
+			<th><a id="rightLink" href="#">Read Article</a></th>
+		</tr>
+	</table> 	
+	<script type="text/javascript" src="headlines.json"></script>
+	<script src="quotegen.js"></script>
+</body>
+</html>
