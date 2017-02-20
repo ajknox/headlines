@@ -17,9 +17,10 @@
 		.twoColumn {width:200px;}
 		a {color: white;}
 		#headlineTable {color: white;}
-		#leftRow {background-color: blue; height: 33%}
+		#leftRow {background-color: mediumblue; height: 33%}
 		#middleRow {background-color: black; height: 34%}
-		#rightRow {background-color: red; height: 33%}
+		#rightRow {background-color: crimson; height: 33%}
+		#middleHeadline {font-weight: bold;}
 	</style>
 </head>
 <body>
@@ -27,17 +28,16 @@
 		<tr id="leftRow">
 			<th class="zeroColumn"><h1 id="leftSource"></h1><div id="leftDate"></div></th>
 			<th><div id="leftHeadline"></div></th>
-			<th class="twoColumn"><a id="leftLink" href="#">Read Article</a></th>
+			<th class="twoColumn"><a id="leftLink" href="#"><img src="button.png" alt="Next Headline" style="width:auto; height:50%;"></a></th>
 		</tr>
 		<tr id="middleRow">
-			<th><h1 id="topic"></h1></th>
-			<th><div id="middleHeadline"></div></th>
-			<th><a id="headlineButton" onclick="newHeadline()" href="javascript:void(0);"><img src="refresh_white.png" alt="Next Headline" style="width:auto; height:25%;"></a></th>
+			<th colspan="2"><div id="middleHeadline"><b>test middle</b></div></th>
+			<th><a id="headlineButton" onclick="newHeadline()" href="javascript:void(0);"><img src="refresh.png" alt="Next Headline" style="width:auto; height:50%;"></a></th>
 		</tr>
 		<tr id="rightRow">
 			<th><h1 id="rightSource"></h1><div id="rightDate"></div></th>
 			<th><div id="rightHeadline"></div></th>
-			<th><a id="rightLink" href="#">Read Article</a></th>
+			<th><a id="rightLink" href="#"><img src="button.png" alt="Next Headline" style="width:auto; height:50%;"></a></th>
 		</tr>
 	</table> 	
 	<script type="text/javascript" src="headlines.json"></script>
