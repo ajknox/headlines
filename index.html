@@ -13,13 +13,14 @@
 			vertical-align: middle;
 			text-align: middle;
 			}
-		.sourceColumn {width:200px;}
+		.sourceColumn {width:200px; font-weight: bold;}
 		.slashColumn {width:100px;}
+		.contentColumn {text-align: middle;}
 		.linkColumn {width:200px;}
 		a {color: white;}
 		h1 {
 			font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
-			font-size: 24px;
+			font-size: 36px;
 			font-style: normal;
 			font-variant: normal;
 			font-weight: 500;
@@ -33,19 +34,29 @@
 			font-weight: 500;
 			line-height: 24px;
 			}
+		p {
+			font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+			font-size: 16px;
+			font-style: normal;
+			font-variant: normal;
+			font-weight: 500;
+			line-height: 16px;
+			}
 		#headlineTable {color: white;}
-		#leftRow {background-color: mediumblue; height: 33%}
-		#middleRow {background-color: black; height: 34%}
-		#rightRow {background-color: crimson; height: 33%}
+		#leftRow {background-color: mediumblue; height: 33%;}
+		#middleRow {background-color: black; height: 34%;}
+		#rightRow {background-color: crimson; height: 33%;}
 		#middleHeadline {font-weight: bold;}
+		#leftHeadline {text-align: left;}
+		#rightHeadline {text-align: left;}
 	</style>
 </head>
 <body>
 	<table id="headlineTable">
 		<tr id="leftRow">
-			<th class="sourceColumn"><h1 id="leftSource"></h1><div id="leftDate"></div></th>
+			<th class="sourceColumn"><h1 id="leftSource"></h1><p id="leftDate"></p></th>
 			<th class="slashColumn"><img src="slash.png" alt="/"></th>
-			<th><div id="leftHeadline"></div></th>
+			<th class="contentColumn"><div id="leftHeadline"></div></th>
 			<th class="linkColumn"><a id="leftLink" href="#"><img src="button.png" alt="Read Article" style="width:auto; height:50%;"></a></th>
 		</tr>
 		<tr id="middleRow">
@@ -54,7 +65,7 @@
 			<th><a id="headlineButton" onclick="newHeadline()" href="javascript:void(0);"><img src="refresh.png" alt="Next Headline" style="width:auto; height:50%;"></a></th>
 		</tr>
 		<tr id="rightRow">
-			<th><h1 id="rightSource"></h1><div id="rightDate"></div></th>
+			<th><h1 id="rightSource"></h1><p id="rightDate"></p></th>
 			<th><img src="slash.png" alt="/"></th>
 			<th><div id="rightHeadline"></div></th>
 			<th><a id="rightLink" href="#"><img src="button.png" alt="Read Article" style="width:auto; height:50%;"></a></th>
