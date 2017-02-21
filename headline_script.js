@@ -10,7 +10,6 @@ var promise = function(url){
         reject(Error(request.statusText));
       }
     };
-
     request.onerror = function() {
       reject(Error("Network Error"));
     };
