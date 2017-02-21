@@ -2,26 +2,29 @@
 <html>
 <head>
 	<title>Read Between The Headlines</title>
-	<link rel="stylesheet" href="styles/styles.css" type="text/css"/>
+	<link rel="stylesheet" href="styles/styles.css" type="text/css" />
 </head>
 <body >
 	<section id="headlineTable">
 		<article class="flex-row" id="leftRow">
-			<th class="sourceColumn"><h1 id="leftSource"></h1></th>
-			<th class="contentColumn"><div id="leftHeadline"></div><p id="leftDate"></p></th>
-			<th class="linkColumn"><a id="leftLink" href="#" target="_blank"><img src="button.png" alt="Read Article" title="Read Article"></a></th>
-			<th class="padColumn"></th>
+			<h1 id="leftSource" class="dash source"></h1>
+			<div id="leftHeadline"></div><p id="leftDate"></p>
+			<a id="leftLink" href="#" target="_blank">
+				<img src="button.png" alt="Read Article" title="Read Article" />
+			</a>
 		</article>
 		<article class="flex-row" id="middleRow">
-			<th colspan="4"><h1 id="middleHeadline"></h1></th>
-			<th><a id="headlineButton" onclick="newHeadline()" href="javascript:void(0);"><img src="refresh.png" alt="Next Headline" title="Next Headline"></a></th>
-			<th></th>
+			<h1 id="middleHeadline"></h1>
+			<a id="headlineButton" onclick="newHeadline()" href="javascript:void(0);">
+				<img src="refresh.png" alt="Next Headline" title="Next Headline" />
+			</a>
 		</article>
 		<article class="flex-row" id="rightRow">
-			<th></th>
-			<th><h1 id="rightSource"></h1></th>
-			<th><div id="rightHeadline"></div><p id="rightDate"></p></th>
-			<th><a id="rightLink" href="#" target="_blank"><img src="button.png" alt="Read Article" title="Read Article"></a></th>
+			<h1 id="rightSource" class="dash source"></h1>
+			<div id="rightHeadline"></div><p id="rightDate"></p>
+			<a id="rightLink" href="#" target="_blank">
+				<img src="button.png" alt="Read Article" title="Read Article" />
+			</a>
 		</article>
 	</section>	
 	<script type="text/javascript" src="headlines.json"></script>

@@ -16,18 +16,14 @@ section {
   align-items: center;
   padding-left: 50px; }
 
-.padColumn {
-  width: 50px; }
-
-.sourceColumn {
-  width: 100px;
-  font-weight: bold; }
-
-.slashColumn {
-  width: 100px; }
-
-.contentColumn {
-  text-align: middle; }
+.dash::after {
+  content: '/';
+  font-size: 80px;
+  position: relative;
+  padding-left: 50px;
+  top: 15px;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 300; }
 
 a {
   color: white; }
@@ -78,10 +74,10 @@ p {
 #rightHeadline {
   text-align: left; }
 
-#leftSource {
+.source {
   font-weight: bold;
   text-align: left; }
 
-#rightSource {
+.source {
   font-weight: bold;
   text-align: left; }
