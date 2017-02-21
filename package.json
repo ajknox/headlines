@@ -1,0 +1,24 @@
+{
+  "name": "headlines",
+  "version": "0.0.1",
+  "description": "Headlines, a project for comparing news headlines",
+  "main": "headline_script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile-sass": "node-sass --watch styles/scss --output styles"
+  },
+  "private": "true",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iphipps/headlines.git"
+  },
+  "author": "Andrew Knox",
+  "license": "SEE LICENSE IN license.md",
+  "bugs": {
+    "url": "https://github.com/ajknox/headlines/issues"
+  },
+  "homepage": "https://github.com/ajknox/headlines#readme",
+  "devDependencies": {
+    "node-sass": "^4.5.0"
+  }
+}
