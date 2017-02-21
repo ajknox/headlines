@@ -3,16 +3,23 @@
 <head>
 	<title>Read Between The Headlines</title>
 	<style>
+	<!--
 		* {box-sizing: border-box;}
-		table {
-			border-collapse: collapse; 
+		.whole-page {
+			display: -webkit-flex;
+			display: flex;
+			-webkit-flex-direction: row-reverse;
+			flex-direction: row-reverse;
 			height:100%; 
 			width:100%; 
-			position: absolute; top: 0; bottom: 0; left: 0; right: 0; 
-			border:0px solid black;
 			vertical-align: middle;
 			text-align: middle;
 			}
+		.whole-page > * {
+			padding: 10px;
+			flex: 1 100%;
+			}
+		.flex-item {color: white;}
 		.padColumn {width:50px;}
 		.sourceColumn {width:100px; font-weight: bold;}
 		.slashColumn {width:100px;}
@@ -53,17 +60,137 @@
 		#rightHeadline {text-align: middle;}
 		#leftSource {font-weight: bold; text-align: left;}
 		#rightSource {font-weight: bold; text-align: left;}
+		-->
+		
+	@import "compass/css3";
+
+.wrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; 
+  height:100%; 
+  width:100%; 
+ border-bottom: none;
+ border-top: none;
+ flex-grow: 1;
+flex-shrink: 1;
+flex-basis: auto;
+ 
+  flex-direction: column;
+  margin:none;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+.row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+	 border-bottom: none;
+ border-top: none;
+ margin: none;
+  flex-wrap: nowrap;
+  margin:none;
+  font-weight: bold;
+  text-align: center;
+
+}
+
+ .wrapper > * {
+  padding: 0px;
+  justify-content: center;
+} 
+
+.leftSource {
+  background: #0D377D;
+}
+.leftSlash {
+  background: #0D377D;
+}
+.leftSlash {
+  background: #0D377D;
+}
+.leftHeadline {
+  background: #0D377D;
+}
+.leftLink {
+  background: #0D377D;
+}
+
+.rightSource {
+  background: #CD2323;
+}
+.rightSlash {
+  background: #CD2323;
+}
+.rightSlash {
+  background: #CD2323;
+}
+.rightHeadline {
+  background: #CD2323;
+}
+.rightLink {
+  background: #CD2323;
+}
+
+.middleHeadline {
+  background: black;
+}
+.middleLink {
+  background: black;
+}
+
+/* We tell all items to be 100% width */
+.leftSource, .rightSource, .leftLink, .rightLink, .leftSlash, .rightSlash {
+  flex: 1 auto;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+.leftHeadline, .rightHeadline, .middleHeadline {
+  flex: 4 auto;
+  width: auto;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+.aside {
+    display: inline-block;
+    margin:none;
+}
+
+
+@media all and (min-width: 800px) {
+  .leftSource { order: 1; } 
+  .leftSlash    { order: 2; }
+  .leftHeadline { order: 3; }
+  .leftLink  { order: 4; }
+  .middleHeadline ( order: 5;)
+  .middleLink ( order: 6;)
+  .rightSource { order: 7; } 
+  .rightSlash    { order: 8; }
+  .rightHeadline { order: 9; }
+  .rightLink  { order: 10; }
+  
+}
+
+body {
+  padding: 2em; 
+}
 	</style>
 </head>
 <body>
-	<table id="headlineTable">
+	<!--<div class="whole-page" id="headlineTable">
 		<tr id="leftRow">
-			<th class="padColumn"></th>
-			<th class="sourceColumn"><h1 id="leftSource"></h1></th>
-			<th class="slashColumn"><img src="slash.png" alt="/"></th>
-			<th class="contentColumn"><div id="leftHeadline"></div><p id="leftDate"></p></th>
-			<th class="linkColumn"><a id="leftLink" href="#" target="_blank"><img src="button.png" alt="Read Article" title="Read Article"></a></th>
-			<th class="padColumn"></th>
+			<th class="flexContainer" id="padColumn"></th>
+			<th class="flexContainer" id="sourceColumn"><h1 id="leftSource"></h1></th>
+			<th class="flexContainer" id="slashColumn"><img src="slash.png" alt="/"></th>
+			<th class="flexContainer" id="contentColumn"><div id="leftHeadline"></div><p id="leftDate"></p></th>
+			<th class="flexContainer" id="linkColumn"><a id="leftLink" href="#" target="_blank"><img src="button.png" alt="Read Article" title="Read Article"></a></th>
+			<th class="flexContainer" id="padColumn2"></th>
 		</tr>
 		<tr id="middleRow">
 			<th></th><th></th><th></th>
@@ -81,6 +208,30 @@
 		</tr>
 	</table> 	
 	<script type="text/javascript" src="headlines.json"></script>
-	<script src="headline_script.js"></script>
+	<script src="headline_script.js"></script>-->
+	
+
+<div class="wrapper">
+	<div class="row">
+		<h1 class="aside leftSource" id="leftSource">CNN</h1>
+		<div class="aside leftSlash"><img src="slash.png" alt="/" width="100px"></div>
+		<article class="aside leftHeadline"><div id="rightHeadline">CNN Headline</div><p id="rightDate">CNN Date</p></article>
+		<a class="aside leftLink" id="rightLink" href="#" target="_blank"><img src="button.png" alt="Read Article" title="Read Article"></a>
+	</div>
+	<div class="row">
+		<article class="aside middleHeadline"><h1 id="middleHeadline">Topic at Hand</h1></article>
+		<div class="aside middleLink"><a id="headlineButton" onclick="newHeadline()" href="javascript:void(0);"><img src="refresh.png" alt="Next Headline" title="Next Headline"></a></div>
+	</div>
+	<div class="row">
+		<h1 class="aside rightSource" id="rightSource">FOX NEWS</h1>
+		<div class="aside rightSlash"><img src="slash.png" alt="/" width="100px"></div>
+		<article class="aside rightHeadline"><div id="rightHeadline">Fox Headline</div><p id="rightDate">Fox Date</p></article>
+		<a class="aside rightLink" id="rightLink" href="#" target="_blank"><img src="button.png" alt="Read Article" title="Read Article"></a>
+	</div>
+</div>
+
+<script type="text/javascript" src="headlines.json"></script>
+<script src="headline_script.js"></script>
+
 </body>
 </html>
