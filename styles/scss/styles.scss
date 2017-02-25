@@ -1,88 +1,142 @@
+@import 'normalize';
 $blue: #0D377D;
 $red: #CD2323;
 $black: #000000;
-* {box-sizing: border-box;}
+$last-item-width: 15vw;
+$general-padding: 3vw;
 body {
 	margin: 0;
+	font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+	font-size: 12px;
 }
 section {
 	display: flex;
 	flex-direction: column;
 	height: 100vh;
-
+	color: white;
+	width: 100vw;
 }
 .flex-row{
 	display: flex;
 	flex-grow: 1;
 	justify-content: space-between;
 	align-items: center;
-	padding-left: 50px;
+	position: relative;
 }
 .dash {
+	position: relative;
 	&::after {
-		content: '/';
-		font-size: 80px;
-		position: relative;
-		padding-left: 50px;
-		top: 15px;
-		color: rgba(255,255,255,.6);
-		font-weight: 300;
+		content: '';
+		width: 2px;
+		height: 50px;
+		position: absolute;
+		transform: skew(-10deg);
+		right: 0;
+		top: -11px;
+		background-color: rgba(255,255,255,.6);
 
 	}
 }
 a {color: white;}
 h1 {
-	font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
-	font-size: 36px;
+
+	font-size: 20px;
 	font-style: normal;
 	font-variant: normal;
 	font-weight: 500;
-	line-height: 36px;
-	}
+	line-height: 1;
+	margin: 0;
+}
 div {
 	font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
 	font-size: 24px;
 	font-style: normal;
 	font-variant: normal;
 	font-weight: 500;
-	line-height: 24px;
-	}
+	line-height: 1;
+}
 p {
 	font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
-	font-size: 16px;
+	font-size: 12px;
 	font-style: normal;
 	font-variant: normal;
 	font-weight: 500;
-	line-height: 16px;
+	line-height: 1;
 	text-align: right;
+	padding: 0;
+	margin: 0;
+}
+q{
+	font-size: 18px;
+	padding-top: 3vw;
+	padding-bottom: 3vw;
+	&:after, &:before {
+		content: '';
 	}
-#headlineTable {
-	color: white;
+}
+img {
+	max-width: 100%;
+}
+.last-item {
+	width: $last-item-width;
+	flex-shrink: 0;
+}
+.mid-section {
+	display: flex;
+	align-items: center;
+	flex-grow: 1;
+	padding-left: $general-padding;
+	padding-right: $general-padding;
+
+}
+.date {
+	position: absolute;
+	bottom: $general-padding;
+	right: $last-item-width + $general-padding;
 }
 #leftRow {
 	background-color: $blue;
 }
 #middleRow {
 	background-color: $black;
+	h1 {
+		font-weight: 500;
+		flex-grow: 1;
+		text-align: center;
+		padding-left: $general-padding;
+		padding-right: $general-padding;
+	}
 }
 #rightRow {
 	background-color: $red;
 }
-#middleHeadline {
-	font-weight: bold;
-}
-#leftHeadline {
-	text-align: left;
-}
-#rightHeadline {
-	text-align: left;
-}
+
 .source {
 	font-weight: bold; 
 	text-align: left;
-}
-.source {
-	font-weight: bold; 
-	text-align: left;
+	padding-left: $general-padding;
+	padding-right: $general-padding;
+	// max-width: 200px;
 }
 
+@media only screen and (min-width : 768px) {
+	q{
+		font-size: 24px;
+	}
+	h1 {
+		font-size: 36px;
+	}
+	p {
+		font-size: 16px;
+	}
+	.dash:after {
+		height: 60px;
+		top: -6px;
+	}
+	.last-item {
+		width: 10vw;
+	}
+	.date {
+		right: 13vw; 
+	}
+}
