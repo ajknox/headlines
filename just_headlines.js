@@ -1,5 +1,3 @@
-/*var headlines = JSON.parse(raw_headlines);
-*/
 var headlines = [{"right_link": "http://www.foxnews.com/politics/2017/02/16/trump-blasts-out-control-media-defends-agenda-at-heated-press-conference.html", "right_source": "FOX NEWS", "right_date": "February 16, 2017", "left_headline": "\"Trump Lashes Out\" ", "topic": "Press Conference 2/16", "left_date": "February 2, 2017", "left_source": "CNN", "middle_headline": "Trump holds a 77 minute press conference.", "right_headline": "\"Press Beatdown: Trump blasts out of control media, defends agenda administration.\" ", "left_link": "http://www.cnn.com/2017/02/16/politics/donald-trump-press-conference-amazing-day-in-history/index.html"},
 {"right_link": "http://www.foxnews.com/politics/2017/02/15/just-like-russia-trump-renews-fight-with-intelligence-agencies-amid-leaks.html", "right_source": "FOX NEWS", "right_date": "February 15, 2017", "left_headline": "\"Trump Aides Were In Constant Touch With Senior Russian Officials During Campaign\"  ", "topic": "Russia Leaks", "left_date": "February 15, 2017", "left_source": "CNN", "middle_headline": "Trump's administration is accussed of being in touch with Russia during the presidential campaign.", "right_headline": "\" 'Just like Russia' Trump renews fight with intellegence agencies amid leaks.\" ", "left_link": "http://www.cnn.com/2017/02/14/politics/donald-trump-aides-russians-campaign/index.html"},
 {"right_link": "http://www.foxnews.com/politics/2017/02/16/trump-blasts-out-control-media-defends-agenda-at-heated-press-conference.html", "right_source": "FOX NEWS", "right_date": "January 30, 2017", "left_headline": "\"Trump signs executive order to keep out 'radical Islamic terrorists'\"  ", "topic": "Immigration Ban", "left_date": "January 30, 2017", "left_source": "CNN", "middle_headline": "Trump banned people from the following predominantly Muslim countries from entering the US: Iraq, Syria, Iran, Sudan, Libya, Somalia and Yemen.\n\n", "right_headline": "\"Some Muslim-American activists back Trump's extreme vetting.\"  ", "left_link": "http://www.cnn.com/2017/01/27/politics/trump-plans-to-sign-executive-action-on-refugees-extreme-vetting/"},
@@ -15,23 +13,3 @@ var headlines = [{"right_link": "http://www.foxnews.com/politics/2017/02/16/trum
 {"right_link": "http://www.foxnews.com/us/2017/01/21/fact-check-trump-overstates-crowd-size-at-inaugural.html", "right_source": "FOX NEWS", "right_date": "January 21, 2017", "left_headline": "\"Comparing Donald Trump and Barack Obama's inaugural crowd sizes.\"", "topic": "Inauguration", "left_date": "January 21, 2017", "left_source": "CNN", "middle_headline": "Finally, something we can all agree on. ", "right_headline": "\"FACT CHECK: Trump overstates crowd size at inaugural.\"", "left_link": "http://www.cnn.com/2017/01/20/politics/donald-trump-barack-obama-inauguration-crowd-size/"},
 {"right_link": "http://www.foxnews.com/politics/2017/02/24/media-outlets-accuse-white-house-blocking-certain-press-from-covering-event.html", "right_source": "FOX NEWS", "right_date": "February 24, 2017", "left_headline": "\"White House blocks CNN\"", "topic": "Media", "left_date": "February 24, 2017", "left_source": "CNN", "middle_headline": "CNN,The New York Times, the Los Angeles Times, Politico and BuzzFeed were excluded from a  White House press briefing with Sean Spicer.", "right_headline": "\"Media outlets accuse White House of blocking certain press from covering event.\"", "left_link": "http://money.cnn.com/2017/02/24/media/cnn-blocked-white-house-gaggle/index.html"},
 {"right_link": "http://www.foxnews.com/politics/2017/03/01/trump-basks-in-afterglow-home-run-address-to-congress-will-it-last.html", "right_source": "FOX NEWS", "right_date": "March 1, 2017", "left_headline": "\"Pivot or performance?\"", "topic": "Congress Adress", "left_date": "March 1, 2017", "left_source": "CNN", "middle_headline": "President Trump's address to Congress is well received by public.", "right_headline": "\"VICTORY LAP: President Trump basks in afterglow of 'home run' address to Congress \u2014 but will it last?\"", "left_link": "http://www.cnn.com/2017/03/01/politics/trump-address-congress-highlights/index.html"}]
-
-var headlineNumber = headlines.length - 1;
-
-function newHeadline() {
-	 headlineNumber = (headlineNumber + 1) % headlines.length;
-	document.getElementById('leftHeadline').innerHTML = headlines[headlineNumber]["left_headline"];
-	document.getElementById('leftLink').href = headlines[headlineNumber]["left_link"];
-	document.getElementById('leftSource').innerHTML = headlines[headlineNumber]["left_source"];
-	document.getElementById('leftDate').innerHTML = headlines[headlineNumber]["left_date"];
-	
-	document.getElementById('rightHeadline').innerHTML = headlines[headlineNumber]["right_headline"];
-	document.getElementById('rightLink').href = headlines[headlineNumber]["right_link"];
-	document.getElementById('rightSource').innerHTML = headlines[headlineNumber]["right_source"];
-	document.getElementById('rightDate').innerHTML = headlines[headlineNumber]["right_date"];
-	
-	/*document.getElementById('topic').innerHTML = headlines[headlineNumber]["topic"]; */
-	document.getElementById('middleHeadline').innerHTML = headlines[headlineNumber]["middle_headline"];
-	}
-	
-newHeadline()
