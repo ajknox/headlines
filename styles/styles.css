@@ -421,17 +421,18 @@ section {
   align-items: center;
   position: relative; }
 
+.source-headline-wrap {
+  display: flex;
+  align-items: center; }
+
 .dash {
-  position: relative; }
-  .dash::after {
-    content: '';
-    width: 2px;
-    height: 50px;
-    position: absolute;
-    transform: skew(-10deg);
-    right: 0;
-    top: -11px;
-    background-color: rgba(255, 255, 255, 0.6); }
+  position: relative;
+  display: block;
+  width: 2px;
+  height: 50px;
+  transform: skew(-10deg);
+  background-color: rgba(255, 255, 255, 0.6);
+  margin-left: 3vw; }
 
 a {
   color: white; }
@@ -508,7 +509,8 @@ img {
   font-weight: bold;
   text-align: left;
   padding-left: 3vw;
-  padding-right: 3vw; }
+  align-items: center;
+  display: flex; }
 
 @media only screen and (min-width: 768px) {
   q {

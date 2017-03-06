@@ -23,19 +23,18 @@ section {
 	align-items: center;
 	position: relative;
 }
+.source-headline-wrap{
+	display: flex;
+	align-items: center;
+}
 .dash {
 	position: relative;
-	&::after {
-		content: '';
-		width: 2px;
-		height: 50px;
-		position: absolute;
-		transform: skew(-10deg);
-		right: 0;
-		top: -11px;
-		background-color: rgba(255,255,255,.6);
-
-	}
+	display: block;
+	width: 2px;
+	height: 50px;
+	transform: skew(-10deg);
+	background-color: rgba(255,255,255,.6);
+	margin-left: $general-padding;
 }
 a {color: white;}
 h1 {
@@ -115,7 +114,8 @@ img {
 	font-weight: bold; 
 	text-align: left;
 	padding-left: $general-padding;
-	padding-right: $general-padding;
+	align-items: center;
+	display: flex;
 	// max-width: 200px;
 }
 
