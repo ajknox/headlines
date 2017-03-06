@@ -2,33 +2,49 @@
 <html>
 <head>
 	<title>Read Between The Headlines</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="stylesheet" href="styles/styles.css" type="text/css" />
 </head>
 <body >
 	<section id="headlineTable">
 		<article class="flex-row" id="leftRow">
-			<h1 id="leftSource" class="dash source"></h1>
-			<div><div id="leftHeadline"></div><p id="leftDate"></p></div>
-			<a id="leftLink" href="#" target="_blank">
+			<div class="source-headline-wrap">
+				<h1 class="source">
+					<span id="leftSource"></span>
+					<span class="dash"></span>
+				</h1>
+				<div class="mid-section">
+					<q id="leftHeadline"></q>
+					<p class="date" id="leftDate"></p>
+				</div>
+			</div>
+			<a id="leftLink" href="#" target="_blank" class="last-item">
 				<img src="button.png" alt="Read Article" title="Read Article" />
 			</a>
 		</article>
 		<article class="flex-row" id="middleRow">
-			<p></p>
 			<h1 id="middleHeadline"></h1>
-			<a id="headlineButton" onclick="newHeadline()" href="javascript:void(0);">
+			<a id="headlineButton" onclick="newHeadline()" href="javascript:void(0);" class="last-item">
 				<img src="refresh.png" alt="Next Headline" title="Next Headline" />
 			</a>
 		</article>
 		<article class="flex-row" id="rightRow">
-			<h1 id="rightSource" class="dash source"></h1>
-			<div><div id="rightHeadline"></div><p id="rightDate"></p></div>
-			<a id="rightLink" href="#" target="_blank">
+			<div class="source-headline-wrap">
+				<h1 class="source">
+					<span id="rightSource"></span>
+					<span class="dash"></span>
+				</h1>
+				<div class="mid-section">
+					<q id="rightHeadline"></q>
+					<p class="date" id="rightDate"></p>
+				</div>
+			</div>
+			<a id="rightLink" href="#" target="_blank" class="last-item">
 				<img src="button.png" alt="Read Article" title="Read Article" />
 			</a>
 		</article>
 	</section>	
-	<script src="just_headline.js"></script>
+	<script type="text/javascript" src="headlines.json"></script>
 	<script src="headline_script.js"></script>
 </body>
 </html>
